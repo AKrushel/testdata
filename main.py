@@ -28,7 +28,7 @@ c19 float,
 c20 float,
 c21 float,
 c22 float,
-c23 float,);'''
+c23 float);'''
 
 cur.execute(sql)
 
