@@ -5,7 +5,7 @@ conn = psycopg2.connect(database="postgres",
 
 cur = conn.cursor()
 
-sql = '''CREATE TABLE DETAILS(i int NOT NULL,\
+sql = '''CREATE TABLE testdata(i int NOT NULL,\
 c1 char(20),\
 c2 float,
 c3 float,
@@ -34,6 +34,6 @@ cur.execute(sql)
 
 with open('testdata.csv', 'r') as f:
     next(f)
-    cur.copy_from(f, 'users', sep=',')
+    cur.copy_from(f, 'testdata', sep=',')
 
 conn.commit()
